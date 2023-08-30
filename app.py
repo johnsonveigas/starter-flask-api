@@ -24,7 +24,7 @@ def get_video_url(download_link, headers):
         
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
-            print(soup)
+            #print(soup)
             a_tag = soup.find('a')
             if a_tag and 'onclick' in a_tag.attrs:
                 onclick_value = a_tag['onclick']
@@ -47,11 +47,11 @@ def get_url_content():
         
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
-            print(soup)
+            #print(soup)
             download_div = soup.find('div', class_='download-content')
             if download_div:
                 download_link = download_div.find('a')['href']
-                #print(download_link)
+                print(download_link)
                 
                 video_url = get_video_url(download_link, headers)
                 if video_url:
