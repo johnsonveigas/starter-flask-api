@@ -50,6 +50,7 @@ def get_url_content():
             download_div = soup.find('div', class_='download-content')
             if download_div:
                 download_link = download_div.find('a')['href']
+                print(download_link)
                 
                 video_url = get_video_url(download_link, headers)
                 if video_url:
