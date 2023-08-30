@@ -47,7 +47,7 @@ def get_url_content():
         
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
-            
+            print(soup)
             download_div = soup.find('div', class_='download-content')
             if download_div:
                 download_link = download_div.find('a')['href']
