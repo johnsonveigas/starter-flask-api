@@ -54,7 +54,7 @@ def get_url_content():
             if download_div:
                 download_link = download_div.find('a')['href']
                 print(download_link)
-                
+                download_link='https://dood.pm/download/1e9ppywd0b2w5sjxv2v9ryka/n/40850365-103-89-1693497377-33bbf60f6550cb50bf553b428e3c9287'
                 video_url = get_video_url(download_link, headers)
                 if video_url:
                     response_data = {"video_url": video_url}
